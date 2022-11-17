@@ -35,8 +35,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         let myView = UIView(frame: CGRect(x: 0, y: 0, width: 48, height: 48))
 
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 48, height: 48))
-
-        imageView.image = UIImage(named:"image1")
+        if row % 2 > 0 {
+            imageView.image = UIImage(named:"image1")
+        }else{
+            imageView.image = UIImage(named:"Image2")
+        }
+        
         
         myView.addSubview(imageView)
 
